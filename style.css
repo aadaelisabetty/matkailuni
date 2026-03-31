@@ -26,6 +26,11 @@ header {
 
 /* 3. Yksittäinen postikortti */
 .postikortti {
+    background: rgba(255, 255, 255, 0.4); /* Puoliläpinäkyvä valkoinen */
+    backdrop-filter: blur(10px); /* Sumentaa taustan kortin alta */
+    -webkit-backdrop-filter: blur(10px); /* Tuki Safarille */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    
     background-color: white;
     border-radius: 0px; /* Täysin terävät kulmat */
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
