@@ -49,13 +49,22 @@ const otsikko = document.getElementById('paa-otsikko');
 
 // Funktio joka rakentaa etusivun
 function naytaPaasivu() {
+    if (!container) return;
     container.innerHTML = '';
+    container.style.display = 'grid';
+    otsikko.style.display = 'block';
+    kohdeNakyma.style.display = 'none';
+
     matkat.forEach(matka => {
         const kortti = document.createElement('div');
         kortti.className = 'postikortti';
+        
+        // LISÄTÄÄN KLIKKAUS TÄHÄN (koko kortille)
+        kortti.onclick = () => naytaKohde(matka.id);
+        
         kortti.innerHTML = `
             <img src="${matka.paakuva}" alt="${matka.kohde}">
-            <div class="kohde-linkki" onclick="naytaKohde(${matka.id})">${matka.kohde}</div>
+            <div class="kohde-linkki">${matka.kohde}</div>
         `;
         container.appendChild(kortti);
     });

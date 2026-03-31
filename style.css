@@ -1,6 +1,7 @@
+/* 1. Perusasetukset ja tausta */
 body {
     font-family: 'Dancing Script', 'Cursive', serif;
-    background-color: #b5a997;
+    background-color: #fdfaf5; /* Luonnonvalkoinen (vaihdoin tämän aiemmin toivomaasi) */
     margin: 0;
     padding: 20px;
     display: flex;
@@ -14,73 +15,66 @@ header {
     margin-bottom: 30px;
 }
 
-/* Postikorttien asettelu etusivulla */
+/* 2. Etusivun galleria */
 #postikortit-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 25px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
     width: 100%;
     max-width: 1100px;
 }
+
+/* 3. Yksittäinen postikortti */
 .postikortti {
     background-color: white;
-    /* Muutetaan kulmat: 5px on vain hieman pyöristetty, 0px on täysin terävä */
-    border-radius: 0px; 
-    
-    /* Lisätään varjo, tulee enemmän paperivibes*/
+    border-radius: 0px; /* Täysin terävät kulmat */
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    
     overflow: hidden;
     cursor: pointer;
-    transition: transform 0.3s ease;
-    
-    aspect-ratio: 3 / 2; 
-    
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    aspect-ratio: 16 / 9; /* Matalampi korttimalli */
     display: flex;
     flex-direction: column;
     border: 1px solid #ddd;
     margin-bottom: 20px;
-
-    /* Pakotetaan korttimaiseen muotoon
-    aspect-ratio: 3 / 2; 
-    display: flex;
-    flex-direction: column;
-    border: 1px solid #ddd; /* reunaviivalla vaikutusta???? */
+    position: relative;
 }
 
-/*Kuva kortin sisällä */
+/* Tehoste kun hiiri on kortin päällä */
+.postikortti:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* Kuva kortin sisällä - korjaa venymisen */
 .postikortti img {
     width: 100%;
     height: 100%;
     object-fit: cover; 
     object-position: center; 
 }
- /* kuvan  venyminen oudosti */
 
-
-
+/* Kohteen nimi kortissa */
 .kohde-linkki {
-    display: inline-block;
-    margin-top: 15px;
-    font-size: 1.3rem;
+    display: block;
+    padding: 10px;
+    text-align: center;
+    font-size: 1.5rem;
     color: #2c3e50;
     text-decoration: none;
     font-weight: bold;
-    cursor: pointer;
+    background-color: white;
 }
 
-.kohde-linkki:hover {
-    color: #3498db;
-}
-
-/* Kohdesivun tyylit */
+/* 4. Kohdesivun (sisäsivun) tyylit */
 #kohde-nakyma {
     max-width: 900px;
     width: 100%;
     background: white;
     padding: 40px;
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    border-radius: 0px; /* Tehty myös tästä kantikas teeman mukaisesti */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    display: none; /* Piilotetaan aluksi, JS näyttää tämän */
 }
 
 #takaisin-nappi {
@@ -88,10 +82,11 @@ header {
     background-color: #2c3e50;
     color: white;
     border: none;
-    border-radius: 8px;
+    border-radius: 0px;
     cursor: pointer;
     font-weight: bold;
     margin-bottom: 30px;
+    font-family: inherit;
 }
 
 #takaisin-nappi:hover {
@@ -107,28 +102,19 @@ header {
 
 .kuvagalleria img {
     width: 100%;
-    border-radius: 2px; /* Melkein terävä */
-    margin-bottom: 20px;
+    border-radius: 0px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
-/*{ Vaihoin erilaiseksi tämä og kokeilu
-    width: 100%;
-    height: 250px;
-    object-fit: cover;
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
-*/
+
 .arvio-laatikko {
     margin-top: 30px;
     padding: 20px;
     background-color: #fff9f0;
     border-left: 5px solid #f39c12;
-    border-radius: 5px;
 }
 
 .teksti-osio {
     line-height: 1.6;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     color: #444;
 }
