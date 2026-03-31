@@ -2,8 +2,8 @@ const matkat = [
     {
         id: 0,
         kohde: "Tukholma,Ruotsi",
-        paakuva: "kuvat/tukholmar.jpg", //Pääkuva näkyy ekana
-        kaikkiKuvat: ["kuvat/tukholmatie.jpg"],
+        paakuva: "kuvat/tukholmar.JPEG", //Pääkuva näkyy ekana
+        kaikkiKuvat: ["kuvat/tukholmatie.JPEG"],
         hotelli: "Viking Grace (Laivalla)",
         hotelliUrl: "https://www.vikingline.fi/",
         
@@ -13,8 +13,8 @@ const matkat = [
     {
         id: 1,
         kohde: "Kreeta, Kreikka",
-        paakuva: "kuvat/kreikkam.jpg",
-        kaikkiKuvat: ["kuvat/kreikkaj.jpg", "kuvat/kreikkat.jpg"],
+        paakuva: "kuvat/kreikkam.JPEG",
+        kaikkiKuvat: ["kuvat/kreikkaj.JPEG", "kuvat/kreikkat.JPEG"],
         hotelli: "El Greco",
         hotelliUrl: "https://www.aurinkomatkat.fi/kreikka/agios-nikolaos-kreeta/el-greco?modelCode=AGI",
         arvio: "⭐⭐⭐⭐ - Näkymät huoneesta olivat kuin elokuvasta.",
@@ -33,8 +33,8 @@ const matkat = [
     {
         id: 3,
         kohde: "Lappi,Ylläs,  Suomi",
-        paakuva: "kuvat/revontuli.jpg",
-        kaikkiKuvat: ["kuvat/vrevo.jpg", "kuvat/auringonlaskuy.jpg", "kuvat/nukkumispaikkay.jpg"],
+        paakuva: "kuvat/revontuli.JPEG",
+        kaikkiKuvat: ["kuvat/vrevo.JPEG", "kuvat/auringonlaskuy.JPEG", "kuvat/nukkumispaikkay.JPEG"],
         hotelli: "Airbnb",
         hotelliUrl: "Airbnb möksä ",
         arvio: "⭐⭐⭐⭐⭐ - Revontulien näkeminen on kaupunkilaiselle aina juhlaa.",
