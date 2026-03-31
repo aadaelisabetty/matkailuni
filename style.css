@@ -22,25 +22,30 @@ header {
     width: 100%;
     max-width: 1100px;
 }
-
 .postikortti {
-    background: white;
-    padding: 15px;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    text-align: center;
-    transition: transform 0.2s;
+    background-color: white;
+    /* Muutetaan kulmat: 5px on vain hieman pyöristetty, 0px on täysin terävä */
+    border-radius: 4px; 
+    
+    /* Lisätään varjo, tulee enemmän paperivibes*/
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    
+    /* Pakotetaan korttimaiseen muotoon
+    aspect-ratio: 3 / 2; 
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ddd; /* reunaviivalla vaikutusta???? */
 }
 
-.postikortti:hover {
-    transform: scale(1.03);
-}
-
+/* Kuva kortin sisällä 
 .postikortti img {
     width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 8px;
+    height: 100%;
+    object-fit: cover; /* kuvan  venyminen oudosti */
 }
 
 .kohde-linkki {
@@ -91,12 +96,18 @@ header {
 
 .kuvagalleria img {
     width: 100%;
+    border-radius: 2px; /* Melkein terävä */
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+/*{ Vaihoin erilaiseksi tämä og kokeilu
+    width: 100%;
     height: 250px;
     object-fit: cover;
     border-radius: 12px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
-
+*/
 .arvio-laatikko {
     margin-top: 30px;
     padding: 20px;
