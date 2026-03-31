@@ -1,59 +1,112 @@
 body {
-    font-family: 'Segoe UI', sans-serif;
-    background-color: #f0f4f8;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7f6;
     margin: 0;
     padding: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    color: #333;
 }
 
 header {
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
 }
 
+/* Postikorttien asettelu etusivulla */
 #postikortit-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
     width: 100%;
-    max-width: 1000px;
+    max-width: 1100px;
 }
 
 .postikortti {
     background: white;
-    padding: 20px;
-    border-radius: 15px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.2s;
+}
+
+.postikortti:hover {
+    transform: scale(1.03);
 }
 
 .postikortti img {
     width: 100%;
-    border-radius: 10px;
-    height: 250px;
+    height: 200px;
     object-fit: cover;
+    border-radius: 8px;
 }
 
 .kohde-linkki {
-    display: block;
+    display: inline-block;
     margin-top: 15px;
+    font-size: 1.3rem;
     color: #2c3e50;
     text-decoration: none;
     font-weight: bold;
-    font-size: 1.4rem;
+    cursor: pointer;
 }
 
 .kohde-linkki:hover {
     color: #3498db;
 }
 
-.teksti {
-    font-style: italic;
-    color: #555;
-    margin-top: 10px;
-    border-left: 4px solid #3498db;
-    padding-left: 15px;
-    line-height: 1.5;
+/* Kohdesivun tyylit */
+#kohde-nakyma {
+    max-width: 900px;
+    width: 100%;
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+#takaisin-nappi {
+    padding: 12px 24px;
+    background-color: #2c3e50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+#takaisin-nappi:hover {
+    background-color: #34495e;
+}
+
+.kuvagalleria {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+    margin: 25px 0;
+}
+
+.kuvagalleria img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.arvio-laatikko {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #fff9f0;
+    border-left: 5px solid #f39c12;
+    border-radius: 5px;
+}
+
+.teksti-osio {
+    line-height: 1.6;
+    font-size: 1.1rem;
+    color: #444;
 }

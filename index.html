@@ -8,13 +8,17 @@
 </head>
 <body>
 
-    <header>
+    <header id="paa-otsikko">
         <h1>🌍 Matkailuportfolioni</h1>
-        <p>Tarinoita ja tunnelmia maailman ääriltä.</p>
+        <p>Klikkaa kohteen nimeä lukeaksesi tarinani ja nähdäksesi lisää kuvia.</p>
     </header>
 
-    <main id="postikortit-container">
-        </main>
+    <main id="postikortit-container"></main>
+
+    <section id="kohde-nakyma" style="display: none;">
+        <button onclick="palaaTakaisin()" id="takaisin-nappi">⬅ Takaisin etusivulle</button>
+        <div id="kohde-sisalto"></div>
+    </section>
 
     <script src="script.js"></script>
 </body>
