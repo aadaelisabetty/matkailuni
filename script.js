@@ -20,15 +20,15 @@ const matkat = [
         arvio: "⭐⭐⭐⭐ - Näkymät huoneesta olivat kuin elokuvasta.",
         terveiset: "Oli ihana pikkukaupunki ja hotelli ihan hyvä, miinusta että ilmastoinnista piti maksaa, muuten olisi ollut 5/5. UV oli korkealla ja jäätelö hyvää, ei tullut maha kipeäksi ollenkaan. Ainoa reissun miinus oli vähän auringoa liikaa saanut selkä."
     },
-    {
+   {
         id: 2,
         kohde: "Rooma, Italia tulossa?",
-        paakuva: "https://picsum.photos/id/1033/800/600",// unelmana päästä colosseumille joskus
-        kaikkiKuvat: 
+        paakuva: "https://picsum.photos/id/1033/800/600",
+        kaikkiKuvat: ["https://picsum.photos/id/1033/800/600"],
         hotelli: "Ei vielä tiedä",
-        hotelliUrl: ,
+        hotelliUrl: "#",
         arvio: "? /5 Toivottavasti pääsen vielä",
-        terveiset: 
+        terveiset: "Unelmana Colosseum!"
     },
     {
         id: 3,
